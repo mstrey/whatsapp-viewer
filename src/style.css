@@ -1,0 +1,193 @@
+:root {
+    --bg-color: #e5ddd5;
+    --msg-bg: #ffffff;
+    --text-color: #303030;
+    --meta-color: #667781;
+}
+body {
+    font-family: system-ui, sans-serif;
+    background-color: var(--bg-color);
+    margin: 0;
+    padding: 2vh 5vw;
+    color: var(--text-color);
+}
+.chat-container {
+    max-width: 900px;
+    margin: 0 auto;
+    background: #fff;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+.chat-header {
+    background: #008069;
+    color: white;
+    padding: 15px 20px;
+}
+.controls {
+    margin-top: 15px;
+}
+.controls label {
+    font-size: 0.95em;
+    font-weight: 500;
+}
+.controls input {
+    padding: 5px 10px;
+    border-radius: 4px;
+    border: none;
+    margin-left: 8px;
+    width: 60%;
+}
+.message-list {
+    padding: 20px;
+    background: url('https://web.whatsapp.com/img/bg-chat-tile-light_04fcacde539c58cca6745483d4858c52.png');
+    height: 75vh;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.message {
+    padding: 10px 14px;
+    border-radius: 8px;
+    margin-bottom: 8px;
+    max-width: 70%;
+    box-shadow: 0 1px 1px rgba(0,0,0,0.12);
+    position: relative;
+}
+
+.message.incoming {
+    background-color: var(--msg-bg);
+    align-self: flex-start;
+    border-top-left-radius: 0;
+}
+
+.message.outgoing {
+    background-color: #d9fdd3;
+    align-self: flex-end;
+    border-top-right-radius: 0;
+}
+
+.message.outgoing .sender {
+    color: #0b8043;
+}
+.message-meta {
+    font-size: 0.75em;
+    color: var(--meta-color);
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 6px;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 4px;
+}
+.sender {
+    font-weight: bold;
+    color: #027eb5;
+}
+.media-attachment {
+    background: #f0f0f0;
+    padding: 10px;
+    border-radius: 6px;
+    margin-top: 5px;
+}
+audio {
+    width: 100%;
+    margin-top: 5px;
+}
+/* Estilos para Novos Anexos */
+.doc-attachment {
+    border-left: 4px solid #f44336;
+    background: #fdf2f2;
+    padding: 12px;
+    border-radius: 4px;
+    margin-top: 8px;
+}
+.doc-title {
+    margin: 0 0 8px 0;
+    font-weight: 600;
+    font-size: 0.9em;
+}
+.btn-download {
+    display: inline-block;
+    background: #008069;
+    color: #fff;
+    text-decoration: none;
+    padding: 6px 12px;
+    border-radius: 4px;
+    font-size: 0.85em;
+    font-weight: 500;
+    transition: background 0.2s;
+}
+.btn-download:hover, .btn-download:focus {
+    background: #006653;
+    outline: 2px solid #000;
+}
+.img-attachment {
+    margin-top: 8px;
+    max-width: 100%;
+}
+.chat-img {
+    max-width: 100%;
+    max-height: 300px;
+    border-radius: 6px;
+    object-fit: cover;
+    border: 1px solid #ddd;
+}
+
+/* Paginação */
+.pagination-container {
+    background: #fff;
+    padding: 15px 20px;
+    border-top: 1px solid #ddd;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+}
+.pagination-jump form {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.pagination-jump label {
+    font-size: 0.9em;
+    font-weight: 500;
+}
+.pagination-jump input {
+    width: 60px;
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+.pagination-jump button {
+    background: #008069;
+    color: white;
+    border: none;
+    padding: 6px 12px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+.pagination-list {
+    list-style: none;
+    display: flex;
+    gap: 15px;
+    margin: 0;
+    padding: 0;
+    align-items: center;
+}
+.pagination-list a {
+    text-decoration: none;
+    background: #e5ddd5;
+    color: var(--text-color);
+    padding: 8px 12px;
+    border-radius: 4px;
+    font-weight: 500;
+}
+.pagination-list a:hover {
+    background: #d4c8bd;
+}
+.page-info {
+    font-weight: 600;
+    color: var(--meta-color);
+}
