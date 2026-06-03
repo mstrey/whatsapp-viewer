@@ -191,3 +191,57 @@ audio {
     font-weight: 600;
     color: var(--meta-color);
 }
+
+/* Autenticação */
+.login-body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+.login-container {
+    width: 100%;
+    max-width: 400px;
+}
+.login-box {
+    background: #fff;
+    padding: 40px 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    text-align: center;
+}
+.login-box h1 {
+    font-size: 1.5em;
+    margin-top: 0;
+    color: #008069;
+}
+.btn-login {
+    display: inline-block;
+    background: #4285F4;
+    color: white;
+    padding: 12px 24px;
+    text-decoration: none;
+    border-radius: 4px;
+    font-weight: bold;
+    margin-top: 20px;
+    width: 100%;
+    box-sizing: border-box;
+    transition: background 0.2s;
+}
+.btn-login:hover {
+    background: #357ae8;
+}
+.user-controls {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: rgba(0,0,0,0.1);
+    padding: 5px 10px;
+    border-radius: 4px;
+    margin-top: 10px;
+}
+.btn-logout {
+    color: #fff;
+    font-size: 0.85em;
+    text-decoration: underline;
+}

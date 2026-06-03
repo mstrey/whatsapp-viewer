@@ -1,5 +1,9 @@
 <?php
 declare(strict_types=1);
+require_once __DIR__ . '/AuthHelper.php';
+
+$auth = new AuthHelper();
+$auth->requireLogin();
 require_once __DIR__ . '/WhatsAppParser.php';
 require_once __DIR__ . '/MediaHelper.php';
 require_once __DIR__ . '/ChatLayoutHelper.php';
@@ -21,6 +25,10 @@ $globalMapping = $parser->getGlobalSenderMapping();
     <main class="chat-container" aria-label="Histórico de Conversas do WhatsApp">
         <header class="chat-header">
             <h1>Histórico de Mensagens</h1>
+            <div class="user-controls">
+                <span class="user-email"><?php echo htmlspecialchars($_SESSION['user_email']); ?></span>
+                <a href="logout.php" class="btn-logout" aria-label="Sair do sistema">Sair</a>
+            </div>
             <div class="controls">
                 <label for="searchInput">Pesquisar na conversa:</label>
                 <input type="search" id="searchInput" placeholder="Digite para buscar..." aria-controls="messageList">
