@@ -37,6 +37,14 @@ class MediaHelper {
                            "<img src='{$filePath}' alt='Imagem anexada: {$fileName}' class='chat-img' loading='lazy'>" .
                            "</a>" .
                            "</div>";
+                           
+                case 'mp4':
+                    return "<div class='media-attachment video-attachment'>" .
+                           "<video controls preload='metadata' class='chat-video' aria-label='Vídeo anexado: {$fileName}'>" .
+                           "<source src='{$filePath}' type='video/mp4'>" .
+                           "Seu navegador não suporta a reprodução deste vídeo." .
+                           "</video>" .
+                           "</div>";
 
                 default:
                     return htmlspecialchars($fileName);

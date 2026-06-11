@@ -245,3 +245,16 @@ audio {
     font-size: 0.85em;
     text-decoration: underline;
 }
+
+/* Estilos para Vídeos */
+.video-attachment {
+    margin-top: 8px;
+    max-width: 100%;
+}
+.chat-video {
+    max-width: 100%;
+    max-height: 350px;
+    border-radius: 6px;
+    background-color: #000; /* Fundo preto elegante para vídeos verticais */
+    outline: none;
+}
