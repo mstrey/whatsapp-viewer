@@ -3,7 +3,7 @@ declare(strict_types=1);
 
 class MediaHelper {
     public static function renderBody(string $text): string {
-        $pattern = '/([a-zA-Z0-9_\-\s]+\.(opus|pdf|jpg|jpeg|png|gif))/i';
+        $pattern = '/([a-zA-Z0-9_\-\s]+\.(opus|pdf|jpg|jpeg|png|gif|mp4))/i';
 
         return preg_replace_callback($pattern, function($matches) {
             $fileName = trim($matches[1]);
@@ -37,7 +37,7 @@ class MediaHelper {
                            "<img src='{$filePath}' alt='Imagem anexada: {$fileName}' class='chat-img' loading='lazy'>" .
                            "</a>" .
                            "</div>";
-                           
+
                 case 'mp4':
                     return "<div class='media-attachment video-attachment'>" .
                            "<video controls preload='metadata' class='chat-video' aria-label='Vídeo anexado: {$fileName}'>" .
